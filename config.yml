@@ -6,12 +6,12 @@ db:
   name: 'municipality'
 
 consumer:
-  brokers: ['192.168.178.17:9092']
+  brokers: ['localhost:9092']
   topic: 'update.firebase.token'
   group_id: 'consumer-firebase-token'
 
 cache:
-  address: '192.168.178.17'
+  address: 'localhost'
   port: ':6379'
   password: 'Awesome85**'
   db: 0
