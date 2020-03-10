@@ -4,15 +4,9 @@
     <list default="true" id="d4deef69-41f2-475b-a808-de29b569954e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/51f5dac8-feec-499c-9d81-39184daa1e2d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/51f5dac8-feec-499c-9d81-39184daa1e2d.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/consumer/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/consumer/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/consumer/reader/read.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/consumer/reader/read.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/consumer/reader/reader.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/consumer/reader/reader.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/cache/cache.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/cache/cache.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/cache/token.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/cache/token.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/config/consumer.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/config/consumer.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internal/consumer/consumer.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/consumer/consumer.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/db/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/db/db.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/db/token.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/db/token.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +78,7 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
@@ -135,6 +130,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="23" key="#Go_Modules_(vgo)/0.0.1366.728@0.0.1366.728" timestamp="1583845411444" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1583846256532">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1583846256532" />
     <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1583314516700">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

@@ -8,7 +8,6 @@ db:
 consumer:
   brokers: ['localhost:9092']
   topic: 'update.firebase.token'
-  group_id: 'consumer-firebase-token'
 
 cache:
   address: 'localhost'
