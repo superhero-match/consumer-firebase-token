@@ -18,7 +18,7 @@ import (
 
 	"github.com/go-redis/redis"
 
-	"github.com/consumer-firebase-token/internal/config"
+	"github.com/superhero-match/consumer-firebase-token/internal/config"
 )
 
 // Cache is the Redis client.

@@ -14,7 +14,7 @@
 package consumer
 
 import (
-	"github.com/consumer-firebase-token/internal/config"
+	"github.com/superhero-match/consumer-firebase-token/internal/config"
 	"time"
 
 	"github.com/segmentio/kafka-go"

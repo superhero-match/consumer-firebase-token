@@ -15,7 +15,7 @@ package cache
 
 import (
 	"fmt"
-	"github.com/consumer-firebase-token/internal/cache/model"
+	"github.com/superhero-match/consumer-firebase-token/internal/cache/model"
 )
 
 // SetToken stores Firebase Messaging Token into Redis cache.
