@@ -14,10 +14,10 @@
 package reader
 
 import (
-	"github.com/consumer-firebase-token/internal/cache"
-	"github.com/consumer-firebase-token/internal/config"
-	"github.com/consumer-firebase-token/internal/consumer"
-	"github.com/consumer-firebase-token/internal/db"
+	"github.com/superhero-match/consumer-firebase-token/internal/cache"
+	"github.com/superhero-match/consumer-firebase-token/internal/config"
+	"github.com/superhero-match/consumer-firebase-token/internal/consumer"
+	"github.com/superhero-match/consumer-firebase-token/internal/db"
 )
 
 // Reader holds all the data relevant.

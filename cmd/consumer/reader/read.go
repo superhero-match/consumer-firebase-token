@@ -18,9 +18,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	chm "github.com/consumer-firebase-token/internal/cache/model"
-	"github.com/consumer-firebase-token/internal/consumer/model"
-	dbm "github.com/consumer-firebase-token/internal/db/model"
+	chm "github.com/superhero-match/consumer-firebase-token/internal/cache/model"
+	"github.com/superhero-match/consumer-firebase-token/internal/consumer/model"
+	dbm "github.com/superhero-match/consumer-firebase-token/internal/db/model"
 )
 
 // Read consumes the Kafka topic and updates the Firebase Messaging Token in DB and Cache.

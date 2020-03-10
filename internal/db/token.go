@@ -14,7 +14,7 @@
 package db
 
 import (
-	"github.com/consumer-firebase-token/internal/db/model"
+	"github.com/superhero-match/consumer-firebase-token/internal/db/model"
 )
 
 // UpdateFirebaseToken updates existing Firebase Messaging Token.

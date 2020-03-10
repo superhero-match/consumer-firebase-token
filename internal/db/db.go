@@ -17,7 +17,7 @@ import (
 	"database/sql"
 	"fmt"
 
-	"github.com/consumer-firebase-token/internal/config"
+	"github.com/superhero-match/consumer-firebase-token/internal/config"
 
 	_ "github.com/go-sql-driver/mysql" // MySQL driver.
 )

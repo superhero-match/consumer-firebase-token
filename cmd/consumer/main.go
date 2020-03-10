@@ -14,8 +14,8 @@
 package main
 
 import (
-	"github.com/consumer-firebase-token/cmd/consumer/reader"
-	"github.com/consumer-firebase-token/internal/config"
+	"github.com/superhero-match/consumer-firebase-token/cmd/consumer/reader"
+	"github.com/superhero-match/consumer-firebase-token/internal/config"
 )
 
 func main() {
