@@ -5,6 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/51f5dac8-feec-499c-9d81-39184daa1e2d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/51f5dac8-feec-499c-9d81-39184daa1e2d.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/config/cache.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/config/cache.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internal/config/consumer.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/config/consumer.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internal/consumer/consumer.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/consumer/consumer.go" afterDir="false" />
     </list>
@@ -83,7 +85,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../consumer-match-delete" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -93,7 +95,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Go Build.go build github.com/superhero-match/consumer-firebase-token/cmd/consumer">
     <configuration name="go build github.com/consumer-firebase-token/cmd/consumer" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="consumer-firebase-token" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -103,8 +105,18 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
+    <configuration name="go build github.com/superhero-match/consumer-firebase-token/cmd/consumer" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="consumer-firebase-token" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/cmd/consumer/main.go" />
+      <package value="github.com/superhero-match/consumer-firebase-token/cmd/consumer" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build github.com/superhero-match/consumer-firebase-token/cmd/consumer" />
         <item itemvalue="Go Build.go build github.com/consumer-firebase-token/cmd/consumer" />
       </list>
     </recent_temporary>
@@ -130,25 +142,29 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="23" key="#Go_Modules_(vgo)/0.0.1366.728@0.0.1366.728" timestamp="1583845411444" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1583846256532">
+    <state x="397" y="0" key="#go_build_github.com/consumer-firebase-token/cmd/consumer" timestamp="1584537975099">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1583846256532" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1583314516700">
+    <state x="397" y="0" key="#go_build_github.com/consumer-firebase-token/cmd/consumer/0.0.1366.728@0.0.1366.728" timestamp="1584537975099" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1583847193806">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1583314516700" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1583314516700">
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1583847193806" />
+    <state width="1323" height="294" key="GridCell.Tab.0.bottom" timestamp="1584541385733">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1583314516700" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1583314516699">
+    <state width="1323" height="294" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584541385733" />
+    <state width="1323" height="294" key="GridCell.Tab.0.center" timestamp="1584541385731">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1583314516699" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1583314516700">
+    <state width="1323" height="294" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1584541385731" />
+    <state width="1323" height="294" key="GridCell.Tab.0.left" timestamp="1584541385731">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1583314516700" />
+    <state width="1323" height="294" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1584541385731" />
+    <state width="1323" height="294" key="GridCell.Tab.0.right" timestamp="1584541385732">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="294" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1584541385732" />
   </component>
 </project>
