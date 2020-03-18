@@ -17,4 +17,5 @@ package config
 type Consumer struct {
 	Brokers []string `env:"KAFKA_BROKERS" default:"[localhost:9092]"`
 	Topic   string   `env:"KAFKA_UPDATE_FIREBASE_TOKEN_TOPIC" default:"update.firebase.token"`
+	GroupID string   `env:"KAFKA_FIREBASE_GROUP" default:"consumer-firebase-group"`
 }

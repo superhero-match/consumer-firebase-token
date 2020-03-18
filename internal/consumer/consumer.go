@@ -30,6 +30,7 @@ func NewConsumer(cfg *config.Config) *Consumer {
 	r := kafka.NewReader(kafka.ReaderConfig{
 		Brokers:       cfg.Consumer.Brokers,
 		Topic:         cfg.Consumer.Topic,
+		GroupID:       cfg.Consumer.GroupID,
 		QueueCapacity: int(1),
 		MaxWait:       time.Second,
 	})
