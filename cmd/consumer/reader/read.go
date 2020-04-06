@@ -17,6 +17,9 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"time"
+
+	"go.uber.org/zap"
 
 	chm "github.com/superhero-match/consumer-firebase-token/internal/cache/model"
 	"github.com/superhero-match/consumer-firebase-token/internal/consumer/model"
@@ -32,8 +35,20 @@ func (r *Reader) Read() error {
 		m, err := r.Consumer.Consumer.FetchMessage(ctx)
 		fmt.Print("after FetchMessage")
 		if err != nil {
+			r.Logger.Error(
+				"failed to fetch message",
+				zap.String("err", err.Error()),
+				zap.String("time", time.Now().UTC().Format(r.TimeFormat)),
+			)
+
 			err = r.Consumer.Consumer.Close()
 			if err != nil {
+				r.Logger.Error(
+					"failed to close consumer",
+					zap.String("err", err.Error()),
+					zap.String("time", time.Now().UTC().Format(r.TimeFormat)),
+				)
+
 				return err
 			}
 
@@ -51,15 +66,24 @@ func (r *Reader) Read() error {
 
 		var f model.FirebaseMessagingToken
 		if err := json.Unmarshal(m.Value, &f); err != nil {
-			_ = r.Consumer.Consumer.Close()
+			r.Logger.Error(
+				"failed to unmarshal JSON to Firebase messaging token",
+				zap.String("err", err.Error()),
+				zap.String("time", time.Now().UTC().Format(r.TimeFormat)),
+			)
+
+			err = r.Consumer.Consumer.Close()
 			if err != nil {
-				err = r.Consumer.Consumer.Close()
-				if err != nil {
-					return err
-				}
+				r.Logger.Error(
+					"failed to close consumer",
+					zap.String("err", err.Error()),
+					zap.String("time", time.Now().UTC().Format(r.TimeFormat)),
+				)
 
 				return err
 			}
+
+			return err
 		}
 
 		err = r.DB.UpdateFirebaseToken(dbm.FirebaseMessagingToken{
@@ -68,8 +92,20 @@ func (r *Reader) Read() error {
 			UpdatedAt:   f.UpdatedAt,
 		}, )
 		if err != nil {
+			r.Logger.Error(
+				"failed to update Firebase messaging token in database",
+				zap.String("err", err.Error()),
+				zap.String("time", time.Now().UTC().Format(r.TimeFormat)),
+			)
+
 			err = r.Consumer.Consumer.Close()
 			if err != nil {
+				r.Logger.Error(
+					"failed to close consumer",
+					zap.String("err", err.Error()),
+					zap.String("time", time.Now().UTC().Format(r.TimeFormat)),
+				)
+
 				return err
 			}
 
@@ -82,8 +118,20 @@ func (r *Reader) Read() error {
 			UpdatedAt:   f.UpdatedAt,
 		}, )
 		if err != nil {
+			r.Logger.Error(
+				"failed to set Firebase messaging token in cache",
+				zap.String("err", err.Error()),
+				zap.String("time", time.Now().UTC().Format(r.TimeFormat)),
+			)
+
 			err = r.Consumer.Consumer.Close()
 			if err != nil {
+				r.Logger.Error(
+					"failed to close consumer",
+					zap.String("err", err.Error()),
+					zap.String("time", time.Now().UTC().Format(r.TimeFormat)),
+				)
+
 				return err
 			}
 
@@ -92,8 +140,20 @@ func (r *Reader) Read() error {
 
 		err = r.Consumer.Consumer.CommitMessages(ctx, m)
 		if err != nil {
+			r.Logger.Error(
+				"failed to commit messages",
+				zap.String("err", err.Error()),
+				zap.String("time", time.Now().UTC().Format(r.TimeFormat)),
+			)
+
 			err = r.Consumer.Consumer.Close()
 			if err != nil {
+				r.Logger.Error(
+					"failed to close consumer",
+					zap.String("err", err.Error()),
+					zap.String("time", time.Now().UTC().Format(r.TimeFormat)),
+				)
+
 				return err
 			}
 
