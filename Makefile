@@ -13,7 +13,7 @@ dkb:
 	docker build -t consumer-firebase-token .
 
 dkr:
-	docker run consumer-firebase-token
+	docker run -p "8020:8020" consumer-firebase-token
 
 launch: dkb dkr
 
