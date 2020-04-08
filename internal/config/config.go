@@ -22,6 +22,7 @@ type Config struct {
 	Consumer *Consumer
 	DB       *DB
 	Cache    *Cache
+	Health   *Health
 }
 
 // NewConfig returns the configuration.
