@@ -26,11 +26,12 @@ const timeFormat = "2006-01-02T15:04:05"
 
 // Reader holds all the data relevant.
 type Reader struct {
-	DB         *db.DB
-	Consumer   *consumer.Consumer
-	Cache      *cache.Cache
-	Logger     *zap.Logger
-	TimeFormat string
+	DB             db.DB
+	Consumer       *consumer.Consumer
+	Cache          cache.Cache
+	Logger         *zap.Logger
+	TimeFormat     string
+	TokenKeyFormat string
 }
 
 // NewReader configures Reader.
@@ -55,10 +56,11 @@ func NewReader(cfg *config.Config) (r *Reader, err error) {
 	defer logger.Sync()
 
 	return &Reader{
-		DB:         dbs,
-		Consumer:   c,
-		Cache:      ch,
-		Logger:     logger,
-		TimeFormat: timeFormat,
+		DB:             dbs,
+		Consumer:       c,
+		Cache:          ch,
+		Logger:         logger,
+		TimeFormat:     timeFormat,
+		TokenKeyFormat: cfg.Cache.TokenKeyFormat,
 	}, nil
 }

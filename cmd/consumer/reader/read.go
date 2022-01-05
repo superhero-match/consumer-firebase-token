@@ -90,7 +90,7 @@ func (r *Reader) Read() error {
 			SuperheroID: f.SuperheroID,
 			Token:       f.Token,
 			UpdatedAt:   f.UpdatedAt,
-		}, )
+		})
 		if err != nil {
 			r.Logger.Error(
 				"failed to update Firebase messaging token in database",
@@ -112,11 +112,11 @@ func (r *Reader) Read() error {
 			return err
 		}
 
-		err = r.Cache.SetToken(chm.FirebaseMessagingToken{
+		err = r.Cache.SetToken(r.TokenKeyFormat, chm.FirebaseMessagingToken{
 			SuperheroID: f.SuperheroID,
 			Token:       f.Token,
 			UpdatedAt:   f.UpdatedAt,
-		}, )
+		})
 		if err != nil {
 			r.Logger.Error(
 				"failed to set Firebase messaging token in cache",
