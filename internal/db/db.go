@@ -17,20 +17,26 @@ import (
 	"database/sql"
 	"fmt"
 
-	"github.com/superhero-match/consumer-firebase-token/internal/config"
-
 	_ "github.com/go-sql-driver/mysql" // MySQL driver.
+
+	"github.com/superhero-match/consumer-firebase-token/internal/config"
+	"github.com/superhero-match/consumer-firebase-token/internal/db/model"
 )
 
-// DB holds the database connection.
-type DB struct {
+// DB interface defines database methods.
+type DB interface {
+	UpdateFirebaseToken(f model.FirebaseMessagingToken) error
+}
+
+// db holds the database connection.
+type db struct {
 	DB                      *sql.DB
 	stmtUpdateFirebaseToken *sql.Stmt
 }
 
 // NewDB returns database.
-func NewDB(cfg *config.Config) (dbs *DB, err error) {
-	db, err := sql.Open(
+func NewDB(cfg *config.Config) (dbs DB, err error) {
+	dtbs, err := sql.Open(
 		"mysql",
 		fmt.Sprintf(
 			"%s:%s@tcp(%s:%d)/%s",
@@ -45,13 +51,13 @@ func NewDB(cfg *config.Config) (dbs *DB, err error) {
 		return nil, err
 	}
 
-	stmtUpdate, err := db.Prepare(`call update_firebase_token(?,?,?)`)
+	stmtUpdate, err := dtbs.Prepare(`call update_firebase_token(?,?,?)`)
 	if err != nil {
 		return nil, err
 	}
 
-	return &DB{
-		DB:                     db,
+	return &db{
+		DB:                      dtbs,
 		stmtUpdateFirebaseToken: stmtUpdate,
 	}, nil
 }

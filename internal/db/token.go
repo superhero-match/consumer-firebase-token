@@ -18,7 +18,7 @@ import (
 )
 
 // UpdateFirebaseToken updates existing Firebase Messaging Token.
-func(db *DB) UpdateFirebaseToken (f model.FirebaseMessagingToken) error {
+func (db *db) UpdateFirebaseToken(f model.FirebaseMessagingToken) error {
 	_, err := db.stmtUpdateFirebaseToken.Exec(
 		f.SuperheroID,
 		f.Token,
