@@ -24,10 +24,15 @@ import (
 
 const timeFormat = "2006-01-02T15:04:05"
 
-// Reader holds all the data relevant.
-type Reader struct {
+// Reader interface defines reader method.
+type Reader interface {
+	Read() error
+}
+
+// reader holds all the data relevant.
+type reader struct {
 	DB             db.DB
-	Consumer       *consumer.Consumer
+	Consumer       consumer.Consumer
 	Cache          cache.Cache
 	Logger         *zap.Logger
 	TimeFormat     string
@@ -35,13 +40,16 @@ type Reader struct {
 }
 
 // NewReader configures Reader.
-func NewReader(cfg *config.Config) (r *Reader, err error) {
+func NewReader(cfg *config.Config) (r Reader, err error) {
 	dbs, err := db.NewDB(cfg)
 	if err != nil {
 		return nil, err
 	}
 
-	c := consumer.NewConsumer(cfg)
+	c, err := consumer.NewConsumer(cfg)
+	if err != nil {
+		return nil, err
+	}
 
 	ch, err := cache.NewCache(cfg)
 	if err != nil {
@@ -55,7 +63,7 @@ func NewReader(cfg *config.Config) (r *Reader, err error) {
 
 	defer logger.Sync()
 
-	return &Reader{
+	return &reader{
 		DB:             dbs,
 		Consumer:       c,
 		Cache:          ch,
